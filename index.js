@@ -51,9 +51,15 @@ function Metadata() {
 
     // the next token is the end of the block so no args
     if(nextToken.type === 'block-end'){
-      // tried various things, in various orders...
+
+      // at this point i'm assing that the parser is here {% meta<parser is here> %}
+      // tried various things, in various orders to get the parser to where it needed to be
+
       // parser.skip('meta');
       // parser.skip(lexer.TOKEN_BLOCK_END);
+
+      // parser.skip(lexer.TOKEN_BLOCK_END);
+
       // parser.advanceAfterBlockEnd(token.value);
       // parser.parseSignature(null, true);
       return new nodes.CallExtension(this, 'run');
