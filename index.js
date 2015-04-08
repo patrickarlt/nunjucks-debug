@@ -55,6 +55,7 @@ function Metadata() {
       // parser.skip('meta');
       // parser.skip(lexer.TOKEN_BLOCK_END);
       // parser.advanceAfterBlockEnd(token.value);
+      // parser.parseSignature(null, true);
       return new nodes.CallExtension(this, 'run');
     } else {
       var args = parser.parseSignature(null, true);
